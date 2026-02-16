@@ -11,6 +11,12 @@ const subirimg=()=>{
     const foto=inputf.files[0]
     if (!foto) return alert("Selecciona una imagen"); //validar que haya imagen
 
+    if (!foto.type.startsWith("image/")) {
+    alert("Solo se permiten imágenes");
+    return;
+}
+
+
     btn.disabled=true;
 btn.classList.add("opacity-50", "cursor-not-allowed")
 
@@ -39,6 +45,7 @@ btn.classList.add("opacity-50", "cursor-not-allowed")
     .catch(error => {
         // Capturar errores de red o de proceso
         console.error("Error detectado:", error);
+        alert("Ocurrió un error al subir la imagen")
     })
     .finally(() => {
         loader.classList.add("hidden")
