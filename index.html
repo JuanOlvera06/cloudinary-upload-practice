@@ -1,19 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practica de Cloudinary</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Practica de cloudinary basica</h1><br>
-    <input type="file" id="fileinput" accept="image/*"><br>
-    <img src="" alt="Imagen cagarda desde cloudinary" id="imagen"><br>
-    <button onclick="subirimg()">Cargar imagen...</button>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-300">
+    <nav class="bg-gray-900 text-white">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <span class="text-xl font-bold">MiSitio</span>
+        <ul class="flex gap-6">
+          <li>
+            <a href="../index.html" class="hover:text-gray-300">Inicio</a>
+          </li>
+          <li><a href="#" class="hover:text-gray-300">Servicios</a></li>
+          <li><a href="#" class="hover:text-gray-300">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br />
+
+    <main
+      class="bg-white rounded-lg shadow-md p-5 hover:shadow-xl transition w-[85%] md:w-[50%] max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6 text-center"
+        >Practica de cloudinary basica</h1
+      ><br />
+      <input
+        type="file"
+        id="fileinput"
+        accept="image/*"
+        class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-md focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs" /><br />
+      <img src="" alt="Imagen cagarda desde cloudinary" id="imagen" /><br />
+      <!-- Contenedor donde se pondra la barra de carga -->
+      <div
+        id="loading-status"
+        class="hidden flex items-center justify-center gap-2 my-4">
+        <div
+          class="w-5 h-5 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+        <span class="text-blue-600 font-medium">Subiendo a Cloudinary...</span>
+      </div>
+      <!-- Fin de Contenedor -->
+
+      <button
+      id="subir"
+        onclick="subirimg()"
+        class="block mt-3 text-gray-800 bg-blue-300 rounded-md box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+        Cargar imagen...
+      </button>
+    </main>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
-
-
